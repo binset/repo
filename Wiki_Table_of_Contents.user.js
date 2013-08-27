@@ -12,13 +12,17 @@
 
 
 console.log("script init");
-var toc_height = window.innerHeight.toString() + "px";
-$("#toc").css({"z-index": "9999", height: toc_height , width: "120px", overflow: 'auto', border: '1px solid black', position: 'fixed', left:'2px', top: '0px' });
 
-var zxcFloatNav=
+
+var wikitoc=
 {
     init:function(o)
     {
+        var toc_height = window.innerHeight.toString() + "px";
+        var toc_length = "120px";
+        $("#toc").css({"z-index": "9999", height: toc_height, width: toc_length, overflow: 'auto', border: '1px solid black', position: 'fixed', left:'2px', top: '0px' });
+    
+        
         var div_list=document.getElementsByClassName('mw-headline');
         var content_listing = [];
         var chapters_listing = [];
@@ -170,7 +174,6 @@ var zxcFloatNav=
     
 }
 
-zxcFloatNav.init({});
-
+wikitoc.init({});
 
 console.log("script exit");
