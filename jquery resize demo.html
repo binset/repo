@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>jQuery UI Resizable - Default functionality</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+var css_link = document.createElement("link");
+css_link.setAttribute("rel", "stylesheet");
+css_link.setAttribute("href", "https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css");
+document.head.appendChild(css_link);
+
+
+setTimeout(function() { $( "#resizable" ).resizable(); }, 2000);
+
+$("#resizable").prop("class", " gg ui-widget-content ui-resizable");
+$("#resizable").attr("class", " gg ui-widget-content ui-resizable");
+
+
+$(function() {
+	$( "#resizable" ).resizable("enable" );
+});
+
+
+	
+</script>
+</head>
+
+<body>
+<div id="resizable" >
+<h3 class="ui-widget-header">Resizable</h3>
+</div>
+</body>
+</html>
